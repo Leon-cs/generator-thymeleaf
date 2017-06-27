@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    dbcp2:
+      driver-class-name: com.mysql.jdbc.Driver
+      initial-size: 10
+      validation-query: SELECT NOW()
+      test-on-borrow: false
+      test-while-idle: true
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+    mode: LEGACYHTML5
+server:
+  port: 22001
