@@ -44,8 +44,6 @@ public class ThymeleafController {
             final String srcPath  = "/src" + new Date().getTime();
 
             param.setBuildPath(path + srcPath);
-            String config_path = "/WEB-INF/classes/runtimecfg/generatorConfig.xml";
-            //File configFile = new File(path + config_path);
             File configFile = ResourceUtils.getFile("classpath:generatorConfig.xml");
             // 1.创建 配置解析器
             ConfigurationParser parser = new ConfigurationParser(warnings);
