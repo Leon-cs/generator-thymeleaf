@@ -52,22 +52,26 @@
 
         <div class="form-group">
             <label for="port" class="col-lg-2 control-label">端口号</label>
-            <div class="col-xs-4">
-                <input type="text" placeholder="3306" value="3306" id="port" name="port" class="form-control" required="required"/>
+            <div class="col-lg-10">
+                <input type="text"  placeholder="3306" value="3306" id="port" name="port" class="form-control" required="required"/>
             </div>
+        </div>
+        <div class="form-group">
             <label for="dataBase" class="col-lg-2 control-label">数据库</label>
-            <div class="col-xs-4">
+            <div class="col-lg-10">
                 <input type="text" placeholder="databaseName" id="dataBase" name="dataBase" class="form-control" required="required"/>
             </div>
         </div>
 
         <div class="form-group">
             <label for="userId" class="col-lg-2 control-label">用户名</label>
-            <div class="col-xs-4">
+            <div class="col-lg-10">
                 <input type="text" placeholder="root" id="userId" name="userId" class="form-control" required="required"/>
             </div>
+        </div>
+        <div class="form-group">
             <label for="userPass" class="col-lg-2 control-label">密码</label>
-            <div class="col-xs-4">
+            <div class="col-lg-10">
                 <input type="text" placeholder="password" id="userPass" name="userPass" class="form-control" required="required"/>
             </div>
         </div>
@@ -103,15 +107,13 @@
         </div>
 
         <div class="form-group">
-            <label for="tableNames" class="col-lg-2 control-label">表名</label>
             <div class="col-xs-3">
-                <input type="text" id="tableNames" name="tableNames" class="form-control" placeholder="table_name" required="required"/>
+                <input type="text" id="tableNames" name="tableNames" class="form-control" placeholder="表名" required="required"/>
             </div>
-            <label for="modelNames" class="col-lg-2 control-label">模型名</label>
             <div class="col-xs-3">
-                <input type="text" id="modelNames" name="modelNames" class="form-control" placeholder="TableName" required="required"/>
+                <input type="text" id="modelNames" name="modelNames" class="form-control" placeholder="模型名" required="required"/>
             </div>
-            <a class="btn btn-success btn-xs" onclick="addItem()" title="增加">
+            <a class="btn btn-success btn-lg" onclick="addItem()" title="增加">
                 <span class="fui-check">&nbsp;增加</span>
             </a>
         </div>
@@ -135,8 +137,5 @@
 <script src="js/jquery.form.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/index.js"></script>
-<script>
-    var basePath = '<%=path%>';
-</script>
 </body>
 </html>

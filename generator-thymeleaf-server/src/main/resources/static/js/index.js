@@ -16,12 +16,10 @@ function initConfig(){
 function addItem(){
 	var item = "";
 	item += "<div class='form-group'>"
- 		+"<label class='col-lg-2 control-label'>表名</label>"
  		+"<div class='col-xs-3'><input type='text' name='tableNames' class='form-control' /></div>"
- 		+"<label class='col-lg-2 control-label'>模型名</label>"
  		+"<div class='col-xs-3'><input type='text' name='modelNames' class='form-control' /></div>"
- 		+"<a class='btn btn-success btn-xs' onclick='addItem()' title='增加'><span class='fui-check'>&nbsp;增加</span></a>&nbsp;"
- 		+"<a class='btn btn-danger btn-xs' onclick='redItem(this)' title='删除'><span class='fui-cross'>&nbsp;删除</span></a>"
+ 		+"<a class='btn btn-success btn-lg' onclick='addItem()' title='增加'><span class='fui-check'>&nbsp;增加</span></a>&nbsp;"
+ 		+"<a class='btn btn-danger btn-lg' onclick='redItem(this)' title='删除'><span class='fui-cross'>&nbsp;删除</span></a>"
  		+"</div>";
 	$("#form").append(item);
 }
@@ -41,7 +39,7 @@ function doSubmit(){
 	}
 	var url = '/thymeleaf/mybatis/generator?' + Math.random();
 	$.ajax({
-		type : 'post',
+		type : 'get',
 		url : url,
 		dataType : 'text',
 		data : $("#form").serialize(),
@@ -61,7 +59,7 @@ function doSubmit(){
 			}else{
 				//alert("操作成功");
 				doStorageCookies();//存储到cookie
-				window.open(basePath + "/tmp" +data.zipName);
+				window.open("/tmp" +data.zipName);
 			}
 	    },
 		error: function(data, textStatus){
