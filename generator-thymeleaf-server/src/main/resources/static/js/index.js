@@ -16,8 +16,8 @@ function initConfig(){
 function addItem(){
 	var item = "";
 	item += "<div class='form-group'>"
- 		+"<div class='col-xs-3'><input type='text' name='tableNames' class='form-control' /></div>"
- 		+"<div class='col-xs-3'><input type='text' name='modelNames' class='form-control' /></div>"
+ 		+"<div class='col-xs-3'><input type='text' name='table_names' class='form-control' /></div>"
+ 		+"<div class='col-xs-3'><input type='text' name='model_names' class='form-control' /></div>"
  		+"<a class='btn btn-success btn-lg' onclick='addItem()' title='增加'><span class='fui-check'>&nbsp;增加</span></a>&nbsp;"
  		+"<a class='btn btn-danger btn-lg' onclick='redItem(this)' title='删除'><span class='fui-cross'>&nbsp;删除</span></a>"
  		+"</div>";
@@ -73,7 +73,7 @@ function doSubmit(){
 function setDefaultValues(){
 	$("#connection").val(getCookie("connection"));
 	$("#port").val(getCookie("port") != "" ? getCookie("port") : "3306");
-	$("#dataBase").val(getCookie("dataBase"));
+	$("#database").val(getCookie("database"));
 	$("#userId").val(getCookie("userId") != "" ? getCookie("userId") : "root");
 	$("#userPass").val(getCookie("userPass"));
 	$("#modelPath").val(getCookie("modelPath"));
@@ -85,7 +85,7 @@ function setDefaultValues(){
 function doStorageCookies(){
 	var connection = $("#connection").val();//数据库连接
 	var port = $("#port").val();//端口号
-	var dataBase = $("#dataBase").val();//数据库
+	var dataBase = $("#database").val();//数据库
 	var userId = $("#userId").val();//用户名
 	var userPass = $("#userPass").val();//密码
 	var modelPath = $("#modelPath").val();//模型的包名路径

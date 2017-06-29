@@ -106,7 +106,7 @@ public class ThymeleafController {
         Context context = config.getContexts().get(0);
         //配置数据库属性
         JDBCConnectionConfiguration jdbcConnectionConfiguration = context.getJdbcConnectionConfiguration();
-        String connection = "jdbc:mysql://" + param.getConnection() + ":" + param.getPort() + "/" + param.getDataBase();
+        String connection = "jdbc:mysql://" + param.getConnection() + ":" + param.getPort() + "/" + param.getDatabase();
         jdbcConnectionConfiguration.setConnectionURL(connection);
         jdbcConnectionConfiguration.setUserId(param.getUserId());
         jdbcConnectionConfiguration.setPassword(param.getUserPass());

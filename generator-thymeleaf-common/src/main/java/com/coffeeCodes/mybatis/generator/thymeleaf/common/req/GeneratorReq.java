@@ -1,15 +1,18 @@
 package com.coffeeCodes.mybatis.generator.thymeleaf.common.req;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Data;
 
 /**
  * Created by ChangSheng on 2017/6/28 14:27.
  */
 @Data
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class GeneratorReq {
     private String connection;
 
-    private String dataBase;
+    private String database;
 
     private String port;
 

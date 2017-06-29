@@ -59,41 +59,41 @@
         <div class="form-group">
             <label for="dataBase" class="col-lg-2 control-label">数据库</label>
             <div class="col-lg-10">
-                <input type="text" placeholder="databaseName" id="dataBase" name="dataBase" class="form-control" required="required"/>
+                <input type="text" placeholder="databaseName" id="dataBase" name="database" class="form-control" required="required"/>
             </div>
         </div>
 
         <div class="form-group">
             <label for="userId" class="col-lg-2 control-label">用户名</label>
             <div class="col-lg-10">
-                <input type="text" placeholder="root" id="userId" name="userId" class="form-control" required="required"/>
+                <input type="text" placeholder="root" id="userId" name="user_id" class="form-control" required="required"/>
             </div>
         </div>
         <div class="form-group">
             <label for="userPass" class="col-lg-2 control-label">密码</label>
             <div class="col-lg-10">
-                <input type="text" placeholder="password" id="userPass" name="userPass" class="form-control" required="required"/>
+                <input type="text" placeholder="password" id="userPass" name="user_pass" class="form-control" required="required"/>
             </div>
         </div>
 
         <div class="form-group">
             <label for="modelPath" class="col-lg-2 control-label">模型的包名路径</label>
             <div class="col-lg-10">
-                <input type="text" class="form-control" placeholder="com.yourCompany.core.entity" id="modelPath" name="modelPath" required="required"/>
+                <input type="text" class="form-control" placeholder="com.yourCompany.core.entity" id="modelPath" name="model_path" required="required"/>
             </div>
         </div>
 
         <div class="form-group">
             <label for="daoPath" class="col-lg-2 control-label">DAO的包名路径</label>
             <div class="col-lg-10">
-                <input type="text" class="form-control" placeholder="com.yourCompany.core.dao" id="daoPath" name="daoPath" required="required"/>
+                <input type="text" class="form-control" placeholder="com.yourCompany.core.dao" id="daoPath" name="dao_path" required="required"/>
             </div>
         </div>
 
         <div class="form-group">
             <label for="mappingPath" class="col-lg-2 control-label">映射文件的路径</label>
             <div class="col-lg-10">
-                <input type="text" class="form-control" placeholder="mybatis.mapper" id="mappingPath" name="mappingPath" required="required"/>
+                <input type="text" class="form-control" placeholder="mybatis.mapper" id="mappingPath" name="mapping_path" required="required"/>
             </div>
         </div>
         <div class="form-group">
@@ -107,11 +107,12 @@
         </div>
 
         <div class="form-group">
+            <label for="mappingPath" class="col-lg-2 control-label">需要生成的表与模型名称</label>
             <div class="col-xs-3">
-                <input type="text" id="tableNames" name="tableNames" class="form-control" placeholder="表名" required="required"/>
+                <input type="text" id="tableNames" name="table_names" class="form-control" placeholder="表名" required="required"/>
             </div>
             <div class="col-xs-3">
-                <input type="text" id="modelNames" name="modelNames" class="form-control" placeholder="模型名" required="required"/>
+                <input type="text" id="modelNames" name="model_names" class="form-control" placeholder="模型名" required="required"/>
             </div>
             <a class="btn btn-success btn-lg" onclick="addItem()" title="增加">
                 <span class="fui-check">&nbsp;增加</span>

@@ -8,9 +8,20 @@ spring:
       validation-query: SELECT NOW()
       test-on-borrow: false
       test-while-idle: true
+#    schema: database/init.sql      初始化脚本位置
+#    sql-script-encoding: utf-8
+#    jpa:
+#          hibernate:
+#            ddl-auto: none
   thymeleaf:
     cache: false
     encoding: UTF-8
     mode: LEGACYHTML5
+  mail:
+    host: smtp.163.com
+    username:
+    password:
+    default-encoding: UTF-8
+    test-connection: true
 server:
   port: 22001
